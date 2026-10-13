@@ -1,0 +1,36 @@
+:root {
+  --bg: #0f1221; --card: #191d33; --fg: #e8ebff; --muted: #9aa3c7;
+  --accent: #6c8cff; --line: #2a2f4a;
+}
+@media (prefers-color-scheme: light) {
+  :root { --bg: #f5f6fb; --card: #fff; --fg: #1b1e2e; --muted: #5a6177; --line: #e3e6f0; }
+}
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--bg); color: var(--fg);
+  font: 15px/1.55 -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial, sans-serif; }
+.wrap { max-width: 880px; margin: 0 auto; padding: 24px 16px 64px; }
+header h1 { margin: 0; font-size: 28px; letter-spacing: -0.5px; }
+.sub { color: var(--muted); margin: 4px 0 20px; }
+code { background: rgba(108,140,255,.15); padding: 1px 6px; border-radius: 6px; }
+.card { background: var(--card); border: 1px solid var(--line); border-radius: 14px;
+  padding: 18px; margin-bottom: 18px; }
+label { display: block; font-size: 13px; color: var(--muted); margin-bottom: 10px; }
+input[type="text"], #period { width: 100%; padding: 9px 11px; border-radius: 9px;
+  border: 1px solid var(--line); background: var(--bg); color: var(--fg); font-size: 15px; }
+fieldset { border: 1px solid var(--line); border-radius: 10px; margin: 6px 0 14px; }
+legend { color: var(--muted); font-size: 12px; }
+.chk { display: inline-block; margin: 2px 14px 2px 0; color: var(--fg); }
+button { background: var(--accent); color: #fff; border: 0; padding: 10px 18px;
+  border-radius: 10px; font-size: 15px; cursor: pointer; }
+button:disabled { opacity: .6; cursor: default; }
+.status { margin-left: 12px; color: var(--muted); }
+.grid { display: grid; grid-template-columns: 1fr 1fr; gap: 8px 24px; }
+@media (max-width: 620px) { .grid { grid-template-columns: 1fr; } }
+h2 { font-size: 20px; margin: 4px 0 10px; }
+h3 { font-size: 14px; text-transform: uppercase; letter-spacing: .5px; color: var(--muted);
+  margin: 16px 0 6px; }
+pre { background: var(--bg); border: 1px solid var(--line); border-radius: 9px;
+  padding: 10px; overflow-x: auto; font-size: 13px; }
+.hidden { display: none; }
+ul, ol { margin: 4px 0; padding-left: 20px; }
+li { margin: 3px 0; }

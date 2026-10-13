@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>retro-agent · AI retrospective assistant</title>
+  <link rel="stylesheet" href="/static/style.css" />
+</head>
+<body>
+  <main class="wrap">
+    <header>
+      <h1>retro-agent</h1>
+      <p class="sub">AI retrospective &amp; summary assistant · LLM: <code>{{ llm }}</code></p>
+    </header>
+
+    <section class="card">
+      <label>Period
+        <input id="period" value="2026-W41" />
+      </label>
+      <fieldset>
+        <legend>Connectors</legend>
+        {% for c in connectors %}
+        <label class="chk"><input type="checkbox" name="conn" value="{{ c }}" checked /> {{ c }}</label>
+        {% endfor %}
+      </fieldset>
+      <button id="run">Generate retrospective</button>
+      <span id="status" class="status"></span>
+    </section>
+
+    <section id="report" class="card hidden">
+      <h2 id="r-period"></h2>
+      <p id="r-summary"></p>
+      <div class="grid">
+        <div><h3>Highlights</h3><ul id="r-highlights"></ul></div>
+        <div><h3>Issues</h3><ul id="r-issues"></ul></div>
+        <div><h3>Root causes</h3><ul id="r-roots"></ul></div>
+        <div><h3>Action items</h3><ul id="r-actions"></ul></div>
+      </div>
+      <h3>Metrics</h3><pre id="r-metrics"></pre>
+      <h3>Agent trace</h3><ol id="r-trace"></ol>
+      <h3>Evidence (RAG)</h3><ul id="r-evidence"></ul>
+    </section>
+  </main>
+  <script src="/static/app.js"></script>
+</body>
+</html>
