@@ -1,5 +1,9 @@
 # retro-agent
 
+[![CI](https://github.com/LancyZhao/retro-agent/actions/workflows/ci.yml/badge.svg)](https://github.com/LancyZhao/retro-agent/actions/workflows/ci.yml)
+![Python](https://img.shields.io/badge/python-3.10%2B-blue)
+![License](https://img.shields.io/badge/license-MIT-green)
+
 > An AI **retrospective & summary assistant**: a small, pluggable **Agent platform**
 > that pulls work-period data from business systems (OA / Git / ticket connectors),
 > grounds it with **RAG** over a knowledge base, and produces a structured
